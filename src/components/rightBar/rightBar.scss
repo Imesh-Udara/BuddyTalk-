@@ -1,9 +1,14 @@
+@import "../../style.scss";
+
 .rightbar{
+    @include themify($themes){
     flex: 3;
     position: sticky;
     top: 60px;
     height: calc(100vh - 60px);
     overflow: scroll;
+    background-color: themed("bgSoft");
+    
 
     &::-webkit-scrollbar{
         display: none;
@@ -20,14 +25,20 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
+            background-color: themed("bg");
             span{
-                color: gray;
+                color: themed("textColorsoft");
             }
                 .user{
+                    &:hover{
+                        // transition: 0.4s;
+                        scale: 1.01;
+                    }
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    margin: 5px 0px;
+                    margin: 0px 0px;
+                    padding: 6px 4px;
                     .userInfo{
                         position: relative;
                         display: flex;
@@ -52,7 +63,7 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
                         span{
                             font-size: 14px;
                             font-weight: 500;
-                            color: black;
+                            color: themed("textColor");
                             cursor: pointer;
                         }
                     }
@@ -61,16 +72,30 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
                         align-items: center;
                         gap: 10px;
                         button{
-                            padding: 5px;
+                            &:hover{
+                                padding: 7px;
+                                transition: 0.8s;
+                                border-radius: 5px;
+                            }
+                            padding: 6px;
                             border: none;
                             border-radius: 2px;
                             color: white;
                             cursor: pointer;
+                            font-size: 12px;
+                            font-weight: bold;
 
                             &:first-child{
+                                &:hover{
+                                    background-color: rgb(104, 202, 95);
+                                }
                                 background-color: rgb(146, 255, 136);
+                                
                             }
                             &:last-child{
+                                &:hover{
+                                    background-color: rgb(255, 135, 141);
+                                }
                                 background-color: rgb(255, 167, 171);
                             }
                         }
@@ -88,10 +113,15 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
             padding: 10px;
             border-radius: 5px;
             margin-bottom: 10px;
+            background-color: themed("bg");
             span{
-                color: gray;
+                color: themed("textColorsoft");
             }
                 .user{
+                    &:hover{
+                        // transition: 0.4s;
+                        scale: 1.01;
+                    }
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -114,44 +144,26 @@ box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
                             gap: 2px;
                             span{
                                 font-size: 14px;                              
-                                color: black;
+                                color: themed("textColor");
                             }
                             .s01{
                                 font-weight: 500;
                                 cursor: pointer;
                             }
                             .s02{
-                                color: gray;
+                                color: themed("textColorsoft");
                             }
                             
                         }
                         
                     }
-                    .buttons{
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        button{
-                            padding: 5px;
-                            border: none;
-                            border-radius: 2px;
-                            color: white;
-                            cursor: pointer;
-
-                            &:first-child{
-                                background-color: rgb(146, 255, 136);
-                            }
-                            &:last-child{
-                                background-color: rgb(255, 167, 171);
-                            }
-                        }
-                    }
+                    
                     span{
                         font-size: 12px;
-                        color: gray;
+                        color: themed("textColorsoft");
                     }
                 }
             
         }
     }
-}
+}}
