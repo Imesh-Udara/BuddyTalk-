@@ -1,0 +1,76 @@
+@import "../../style.scss";
+
+
+.post{
+    @include themify($themes){
+        -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14); 
+        box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.14);
+        border-radius: 10px;
+        background-color: themed("bg");
+        color: themed("textColor");
+    .container{
+        padding: 20px;
+        .user{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .userInfo{
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    .name{
+                        font-weight: 500;
+                    }
+                    .date{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .content{
+            margin: 20px 0px 5px 0px;
+            p{
+
+            }
+            img{
+                width: 100%;
+                max-height: 500px;
+                object-fit: cover;
+                margin: 20px 0px;
+                border-radius: 5px;
+            }
+        }
+        hr{
+            
+            height: 0.5px;
+            border: none;
+            background-color: themed("border");
+        }
+        .info{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 10px;
+            
+            .item{
+                display: flex;
+                align-items: center;
+                margin: 20px 0px 10px 0px;
+                justify-content: center;
+                cursor: pointer;
+                font-size: 14px;
+                gap: 5px;
+            }
+
+        }
+    }
+}}

@@ -1,0 +1,98 @@
+@import "../../style.scss";
+
+.comments{
+@include themify($themes){
+    .write{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0px;
+        gap: 20px;
+        @include mobile{
+            display: none;
+                
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        input{
+            flex: 5;
+            width: 100%;
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid themed("border");
+            background-color: transparent;
+            color: themed("textColor");
+            @include mobile{
+                
+                
+            }
+        }
+        button{
+            
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid themed("border");
+            background-color: rgb(184, 76, 184);
+            color: white;
+            font-weight: bold;
+            
+            cursor: pointer;
+        }
+    }
+    .comment{
+        margin: 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        @include mobile{
+            // display: none;
+            
+            
+        }
+        
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .info{
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            align-items: flex-start;
+            
+            span{
+                font-weight: 500;
+            }
+            p{
+                flex:3;
+                color: themed("textColorsoft");
+                @include mobile{
+                    font-size: 14px;
+                    
+                    
+                }
+            }
+        }
+        .date{
+            flex: 1;
+            color: themed("textColorsoft");
+            font-size: 12px;
+            align-self: center;
+            
+        }
+
+    }
+    
+}
+input:focus{
+    outline: none;
+}
+}
